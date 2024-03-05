@@ -50,7 +50,7 @@ function ProjectDetails({ selectedProject, setSelectedProject }) {
     [selectedProject.projectName]
   );
   return (
-    <div className="  ">
+    <div className=" overflow-y-scroll">
       {/* overlay */}
       <div className="z-40 w-[100%] absolute top-0 left-0 bg-[rgba(0,0,0,0.5)] h-full"></div>
 
