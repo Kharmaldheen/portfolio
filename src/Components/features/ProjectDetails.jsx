@@ -50,12 +50,16 @@ function ProjectDetails({ selectedProject, setSelectedProject }) {
     [selectedProject.projectName]
   );
   return (
-    <>
+    <div className="  ">
       {/* overlay */}
       <div className="z-40 w-[100%] absolute top-0 left-0 bg-[rgba(0,0,0,0.5)] h-full"></div>
 
       <motion.div
-        className={`bg-dark-background-body z-50 text-white absolute top-0  h-full w-full py-6 px-10 md:w-[${animation}] flex flex-col gap-6 md:gap-16  md:p-8 transition-all duration-500  ${
+        className={`bg-dark-background-body z-[50] text-white absolute top-0   w-full py-6 md:py-10 md:px-10 px-6 overflow-y-scroll h-full md:h-full  ${
+          animation === "60%" && "md:w-[60%]"
+        } ${
+          animation === "100%" && "md:w-[100%]"
+        }  flex flex-col gap-6 md:gap-16  md:p-8 transition-all duration-500  ${
           selectedProject.id ? "right-0" : "right-[-1200px]"
         }`}
       >
@@ -76,7 +80,7 @@ function ProjectDetails({ selectedProject, setSelectedProject }) {
               )}
             </p>
             <button className="block" onClick={() => setSelectedProject({})}>
-              <BiX className="text-4xl font-bold" />
+              <BiX className="text-3xl md:text-4xl font-bold" />
             </button>
           </div>
 
@@ -166,49 +170,52 @@ function ProjectDetails({ selectedProject, setSelectedProject }) {
         {/* End of top */}
 
         {/* start of body */}
-
         <div
-          className={`px-16 flex flex-col gap-16 ${
+          className={`px-4 md:px-16 flex flex-col gap-10 md:gap-16 ${
             animation === "100%" && "mx-[400px]"
           }`}
         >
           <div>
             {projectName === "The Wild Aosis" && (
-              <BiBriefcase className="text-5xl" />
+              <BiBriefcase className="text-4xl md:text-5xl" />
             )}
             {projectName === "The Bank App" && (
-              <BiSolidBank className="text-5xl" />
+              <BiSolidBank className="text-4xl md:text-5xl" />
             )}
             {projectName === "The Weather app" && (
-              <BiCloudLightRain className="text-5xl" />
+              <BiCloudLightRain className="text-4xl md:text-5xl" />
             )}
           </div>
 
-          <h1 className="Capitalize text-4xl font-bold">{projectName}</h1>
+          <h1 className="Capitalize text-3xl md:text-4xl font-bold">
+            {projectName}
+          </h1>
 
-          <div className="flex flex-col gap-3 md:gap-6">
+          <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex items-center gap-10">
               <div className="flex items-center gap-4">
                 <span>
-                  <BiCodeAlt className="text-3xl" />
+                  <BiCodeAlt className="text-2xl md:text-3xl" />
                 </span>
-                <span className="text-xl text-gray-400">Stack:</span>
+                <span className="text-lg md:text-xl text-gray-400">Stack:</span>
               </div>
-              <p className="text-xl">{stack}</p>
+              <p className="text-lg md:text-xl">{stack}</p>
             </div>
 
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-4">
                 <span>
-                  <BiLogoGithub className="text-3xl" />
+                  <BiLogoGithub className="text-2xl md:text-3xl" />
                 </span>
-                <span className="text-xl text-gray-400">Source:</span>
+                <span className="text-lg md:text-xl text-gray-400">
+                  Source:
+                </span>
               </div>
               <a
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-xl"
+                className="underline md:no-underline md:hover:underline text-lg md:text-xl"
               >
                 Kharmaldheen
               </a>
@@ -217,15 +224,15 @@ function ProjectDetails({ selectedProject, setSelectedProject }) {
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-4">
                 <span>
-                  <BiGlobe className="text-3xl" />
+                  <BiGlobe className="text-2xl md:text-3xl" />
                 </span>
-                <span className="text-xl text-gray-400">Demo:</span>
+                <span className="text-lg md:text-xl text-gray-400">Demo:</span>
               </div>
               <a
                 href={websiteLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline text-xl"
+                className="underline md:no-underline md:hover:underline text-lg md:text-xl"
               >
                 {projectName}
               </a>
@@ -235,11 +242,13 @@ function ProjectDetails({ selectedProject, setSelectedProject }) {
           <span className="h-0.5 w-full bg-slate-400"></span>
 
           <div>
-            <p className="text-xl leading-relaxed">{projectDetails}</p>
+            <p className="text-lg md:text-xl leading-relaxed text-justify">
+              {projectDetails}
+            </p>
           </div>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }
 

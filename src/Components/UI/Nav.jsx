@@ -19,7 +19,10 @@ function Nav() {
 
   const location = useLocation();
 
-  const toggleNavbar = () => setIsOpen(!isOpen);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+    document.body.classList.toggle("no-scroll", isOpen);
+  };
 
   useEffect(() => {
     setIsOpen(false);

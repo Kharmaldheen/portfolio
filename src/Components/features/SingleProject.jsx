@@ -13,7 +13,11 @@ function SingleProject({ project }) {
 
   return (
     <>
-      <div className="md:max-h-[300px] md:w-[450px] text-white flex flex-col gap-2 md:gap-4 md:opacity-75  md:hover:opacity-100 py-2 md:py-0 cursor-pointer ">
+      <div
+        className={`md:max-h-[300px] md:w-[450px] text-white flex flex-col gap-2 md:gap-4 md:opacity-75  md:hover:opacity-100 py-2 md:py-0 cursor-pointer h-full ${
+          selectedProject.id ? "hidden" : "block"
+        }`}
+      >
         <img
           src={project.projectImg}
           className="md:h-[90%] md:w-[440px] rounded-lg cursor-pointe hover:border-[1px] hover:border-solid hover:boder-white"

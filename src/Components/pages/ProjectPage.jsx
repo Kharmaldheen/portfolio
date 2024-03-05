@@ -19,7 +19,7 @@ function ProjectPage() {
       initial="hidden"
       animate="visible"
       exit="hidden"
-      className="flex flex-col gap-6 md:gap-10 md:overflow-auto lg:overflow-hidden"
+      className="flex flex-col gap-6 md:gap-10 md:overflow-auto lg:overflow-hidden pb-40"
     >
       <h1 className="font-bold lg:text-7xl md:text-4xl text-3xl text-white">
         Projects

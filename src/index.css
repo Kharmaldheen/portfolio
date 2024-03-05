@@ -42,4 +42,8 @@ body {
   .selected {
     @apply before:bg-primary-color before:md:scale-x-100 max-w-4 md:text-primary-color font-bold;
   }
+
+  .no-scroll {
+    overflow: hidden;
+  }
 }
