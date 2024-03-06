@@ -5,8 +5,6 @@ import { saveAs } from "file-saver";
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { delay: 1.5, duration: 1.5 } },
-
-  // exit: { x: "-100vw", transition: { ease: "easeInOut" } },
 };
 
 function HomePage() {
@@ -30,12 +28,12 @@ function HomePage() {
       </h1>
       <p className="text-left mt-8 text-2xl md:text-3xl bg-gradient-to-r text-transparent from-white via-text-secondary to-primary-color bg-clip-text font-bold">{`</Frontend Developer>`}</p>
 
-      <p className="md:w-[80%] w-full text-white mt-8 text-base md:text-xl text-justify">
-        <span className="text-gray-500">{`<p>`}</span> <br />
+      <p className="md:w-[80%] w-full text-white mt-8 text-base md:text-xl text-justify flex flex-col gap-2 md:gap-4">
+        <span className="text-gray-500">{`<p>`}</span>
         Developer by day, gamer by leisure 🎮. With a passion for design and an
         obsession for pixel perfection, I specialize in creating elegant,
         user-friendly websites, and responsive user interfaces. Always eager to
-        learn and explore the evolving landscape of web development <br />
+        learn and explore the evolving landscape of web development
         <span className="text-gray-500">{`</p>`}</span>
       </p>
 

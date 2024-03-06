@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { delay: 0.7, duration: 0.7 } },
@@ -7,7 +8,7 @@ const containerVariants = {
 function AboutPage() {
   return (
     <motion.div
-      className="text-white"
+      className="text-white overflow-auto"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

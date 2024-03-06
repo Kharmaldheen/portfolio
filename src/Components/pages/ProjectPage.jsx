@@ -26,6 +26,14 @@ function ProjectPage() {
       </h1>
       {isLoading && <Loader />}
 
+      {error && (
+        <div>
+          <p className="font-medium text-lg md:text-2xl text-white">
+            ❌❌ {error.message}........
+          </p>
+        </div>
+      )}
+
       {!isLoading && !error && (
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
           {projects.map((project) => (

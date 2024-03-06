@@ -45,21 +45,20 @@ function ContactPage() {
     >
       <h1 className="font-bold text-2xl lg:text-6xl md:text-4x">contact.</h1>
 
-      <p className="md:w-3/4 lg:text-xl md:text-lg text-base">
-        <span className="text-gray-500 block">{`<p>`}</span> <br />
+      <p className="md:w-3/4 lg:text-xl md:text-lg text-base flex flex-col gap-2 md:gap-3 leading-relaxed md:leading-loose">
+        <span className="text-gray-500 text-base md:text-lg block text-justify md:text-left">{`<p>`}</span>{" "}
         If you would like to get in touch, talk to me about a project
         collaboration or just say hi, you can reach out to me on any of these
-        platforms <br /> <br />
-        <span className="text-gray-500 block">{`</p>`}</span>
+        platforms
+        <span className="text-gray-500 block text-base md:text-lg text-justify md:text-left">{`</p>`}</span>
       </p>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-3 md:gap-6">
         <div className="flex items-center gap-5 md:gap-8">
           <span>
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="44"
+              className="md:h-[44px] md:w-[30px] h-[38px] w-[24px]"
               viewBox="0 0 24 24"
               variants={svgVariants}
             >
@@ -74,7 +73,7 @@ function ContactPage() {
             href="https://github.com/Kharmaldheen"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline transition-all duration-300 text-lg md:text-xl"
+            className="hover:underline transition-all duration-300 text-base md:text-xl"
           >
             Kharmaldheen
           </a>
@@ -84,8 +83,7 @@ function ContactPage() {
           <span>
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="44"
+              className="md:h-[44px] md:w-[30px] h-[38px] w-[24px]"
               viewBox="0 0 24 24"
               variants={svgVariants}
             >
@@ -100,7 +98,7 @@ function ContactPage() {
             onClick={() =>
               handleEmailLinkClick("abdullahikamaldeen3@gmail.com")
             }
-            className="hover:underline transition-all duration-300 text-lg md:text-xl cursor-pointer"
+            className="hover:underline transition-all duration-300 text-base md:text-xl cursor-pointer"
           >
             abdullahikamaldeen3@gmail.com
           </span>
@@ -110,8 +108,7 @@ function ContactPage() {
           <span>
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="44"
+              className="md:h-[44px] md:w-[30px] h-[38px] w-[24px]"
               viewBox="0 0 24 24"
               variants={svgVariants}
             >
@@ -126,7 +123,7 @@ function ContactPage() {
             href="https://twitter.com/kamzykay"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline transition-all duration-300 text-lg md:text-xl "
+            className="hover:underline transition-all duration-300 text-base md:text-xl "
           >
             Kamzykay
           </a>
@@ -136,10 +133,8 @@ function ContactPage() {
           <span>
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="44"
               fill="currentColor"
-              className="bi bi-linkedin"
+              className="bi bi-linkedin md:h-[44px] md:w-[30px] h-[38px] w-[24px]"
               viewBox="0 0 24 24"
               variants={svgVariants}
             >
@@ -153,7 +148,7 @@ function ContactPage() {
             href="https://linkedin.com/in/abdullahi-kamaldeen-b518a321a"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline transition-all duration-300 text-lg md:text-xl"
+            className="hover:underline transition-all duration-300 text-base md:text-xl"
           >
             Abdullahi Kamaldeen
           </a>

@@ -37,7 +37,7 @@ function PageCheckerUpdate() {
   };
 
   return (
-    <div className="bg-dark-background-body p-[2em] hidden md:flex gap-12 md:gap-4 lg:gap-12 md:w-[35%] lg:[30] overflow-hidden">
+    <div className=" p-[2em] md:p-[0] lg:-[2em] hidden md:flex gap-12 md:gap-4 lg:gap-12 md:w-[35%] lg:[30] overflow-hidden">
       <div className="flex flex-col gap-5 items-center relative">
         <p className="bg-gray-700 w-[0.125rem] lg:w-[1px] h-[4.8125rem] lg:h-[8.5625rem]  text-center"></p>
         <motion.p

@@ -8,6 +8,7 @@ import SkillsPage from "./Components/pages/SkillsPage";
 import ContactPage from "./Components/pages/ContactPage";
 import { AnimatePresence } from "framer-motion";
 import Header from "./Components/Header";
+import ErrorComponent from "./Components/UI/ErrorComponent";
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,8 @@ function App() {
             <Route path="/skills" element={<SkillsPage />} />
             <Route path="/projects" element={<ProjectPage />} />
             <Route path="/contact" element={<ContactPage />} />
+
+            <Route path="*" element={<ErrorComponent />} />
           </Route>
         </Routes>
       </AnimatePresence>

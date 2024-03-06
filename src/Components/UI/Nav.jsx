@@ -49,7 +49,6 @@ function Nav() {
             initial="hidden"
             animate="show"
             className="mt-4 basis-full flex flex-col items-center md:hidden"
-            // className="flex flex-col items-center basis-full text-white"
           >
             <motion.div variants={mobileNavListVariant} {...mobileNavExitProps}>
               <NavLink to="/" className={activeStyleCallback}>
